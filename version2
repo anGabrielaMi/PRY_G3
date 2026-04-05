@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS "Usuario" (
     "contraseña" TEXT NOT NULL
 );
 
--- Tabla de hoteles
+-- Tabla de hotel
 CREATE TABLE IF NOT EXISTS "Hotel" (
     "hotel_id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "nombre" TEXT NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS "Habitacion" (
     FOREIGN KEY("hotel_id") REFERENCES "Hotel"("hotel_id")
 );
 
--- Tabla de reservas (solo aplican a usuarios con rol 'cliente')
+-- Tabla de reservas
 CREATE TABLE IF NOT EXISTS "Reserva" (
     "reserva_id" INTEGER PRIMARY KEY AUTOINCREMENT,
     "usuario_id" INTEGER NOT NULL,
