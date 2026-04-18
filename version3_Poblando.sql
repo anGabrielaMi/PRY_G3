@@ -53,6 +53,15 @@ CREATE TABLE IF NOT EXISTS "Resena" (
     FOREIGN KEY("hotel_id") REFERENCES "Hotel"("hotel_id")
 );
 
+-- Tabla de pagos
+CREATE TABLE IF NOT EXISTS "Pago" (
+    "pago_id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "reserva_id" INTEGER NOT NULL,
+    "monto" INTEGER NOT NULL,
+    FOREIGN KEY("reserva_id") REFERENCES "Reserva"("reserva_id")
+);
+
+
 ----Poblando
 INSERT INTO Usuario (nombre, apellido, correo_electronico, telefono, rol, contraseña)
 VALUES ('George', 'Solo', 'george.solo@hotelreef.com', '123456789', 'administrador', 'claveSecreta123');
