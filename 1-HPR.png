@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+/* Fuente gamer */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+* { font-family: 'Orbitron', sans-serif; }
+
+/* Base del documento */
+html, body {
+    background-color: #F5F5F5;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 100vh;
+    height: 100%;
+}
+
+body {
+    padding-top: 80px;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0; left: 0;
+    z-index: 1000;
+}
+
+header img { height: 60px; }
+
+nav { margin-right: 2%; }
+nav a {
+    color: #0A6E51;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+    color: #0A6E51;
+}
+
+h2 {
+    margin-top: 5%;
+    font-size: 1.6em;
+    color: #ff5722;
+}
+
+.logo_container { 
+    font-size: 1.3em; 
+}
+
+.logo_container span { 
+    position: absolute; 
+    top: 30%; 
+}
+
+@media (max-width: 768px) {
+    footer .logo_container {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .logo_container img { max-width: 80px; }
+    footer .logo_container span { font-size: 1.2em; }
+}
+
+footer {
+    background-color: #F5F5F5;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* Logo en el footer */
+footer .logo_container { 
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+footer .logo_container img {
+    max-width: 100px;
+    height: auto;
+}
+footer .logo_container span {
+    font-size: 1.5em;
+    white-space: nowrap;
+}
